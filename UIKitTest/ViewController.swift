@@ -13,14 +13,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var switchLabel: UILabel!
-    
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var textFieldLabel: UILabel!
     @IBOutlet weak var switchComponent: UISwitch!
+    @IBOutlet weak var sliderComponent: UISlider!
+    @IBOutlet weak var textFieldComponent: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setSwitchText()
+        setSwitchText();
+        setSliderText();
     }
 
     @IBAction func buttonTouchUpInside(_ sender: Any) {
@@ -32,12 +36,25 @@ class ViewController: UIViewController {
         setSwitchText()
     }
     
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        setSliderText();
+    }
+    
+    
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        textFieldLabel.text = sender.text;
+    }
+    
     func setSwitchText() {
         if switchComponent.isOn {
             switchLabel.text = "Switch value: true";
         } else {
             switchLabel.text = "Switch value: false";
         }
+    }
+    
+    func setSliderText() {
+        sliderLabel.text = "Slider progress: \(sliderComponent.value)"
     }
 }
 
