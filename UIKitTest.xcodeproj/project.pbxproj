@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B54BABF27997DC100C29263 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B76E8E2279815A400D020D7 /* UIKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B76E8E5279815A400D020D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B76E8E7279815A400D020D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		8B76E8D9279815A400D020D7 = {
 			isa = PBXGroup;
 			children = (
+				8B54BABF27997DC100C29263 /* README.md */,
 				8B76E8E4279815A400D020D7 /* UIKitTest */,
 				8B76E8FB279815A700D020D7 /* UIKitTestTests */,
 				8B76E905279815A700D020D7 /* UIKitTestUITests */,
