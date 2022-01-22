@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var buttonCount: Int = 0;
+    
+    var buttonCount: Int = 0
     
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var switchLabel: UILabel!
@@ -22,14 +22,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        setSwitchText();
-        setSliderText();
+        setSwitchText()
+        setSliderText()
     }
-
+    
     @IBAction func buttonTouchUpInside(_ sender: Any) {
-        buttonCount += 1;
-        countLabel.text = "Click count: \(buttonCount)";
+        buttonCount += 1
+        countLabel.text = "Click count: \(buttonCount)"
     }
     
     @IBAction func switchValueChanged(_ sender: Any) {
@@ -37,19 +36,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
-        setSliderText();
+        setSliderText()
     }
     
     
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
-        textFieldLabel.text = sender.text;
+        let text = sender.text ?? ""
+        
+        if text.count == 0 {
+            textFieldLabel.text = "(Type anything)"
+        } else {
+            textFieldLabel.text = sender.text
+        }
     }
     
     func setSwitchText() {
         if switchComponent.isOn {
-            switchLabel.text = "Switch value: true";
+            switchLabel.text = "Switch value: true"
         } else {
-            switchLabel.text = "Switch value: false";
+            switchLabel.text = "Switch value: false"
         }
     }
     
