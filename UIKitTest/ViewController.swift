@@ -50,6 +50,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func navigateTo(_ sender: Any) {
+        performSegue(withIdentifier: "segueThirdView", sender: sender)
+    }
+    
     func setSwitchText() {
         if switchComponent.isOn {
             switchLabel.text = "Switch value: true"
